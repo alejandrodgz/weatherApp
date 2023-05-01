@@ -6,7 +6,7 @@ export class Weather{
     }
 
     getWeather(){
-        const URI = `http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&APPID=${this.apiKey}&units=metric`
+        const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&APPID=${this.apiKey}&units=metric`
         return fetch(URI).
             then(response => response.json()).
             catch(error=> console.error(error));
